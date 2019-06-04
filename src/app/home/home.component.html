@@ -1,0 +1,22 @@
+<div class="home-container text-center">
+<div id='stars'></div>
+<div id='stars2'></div>
+<div id='stars3'></div>
+<div id='title'>
+  <span>
+    SPACE WATCH
+  </span>
+  <br>
+  <span id="title-footer">
+    powered by NASA
+  </span>
+</div>
+<div class="card">
+  <h4 style="text-align: center">PICTURE OF THE DAY</h4>
+  <img [src]="pictureOftheDay?.url" *ngIf="pictureOftheDay" alt="Avatar" >
+  <img [src]="loadingImage" *ngIf="!pictureOftheDay" alt="Loading" >
+  <div class="container">
+    <h5><b>{{pictureOftheDay?.title}}</b></h5>     
+  </div>
+</div>
+</div>
